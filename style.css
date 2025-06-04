@@ -1,0 +1,141 @@
+body {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 1000px;
+  height: 620px;
+  margin: auto;
+  background-color: rgb(165, 215, 253);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  background-color: rgb(124, 210, 183);
+  margin-top: 50px;
+}
+.header img {
+  width: 70px;
+  height: 70px;
+}
+
+.body {
+  height: 540px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.header,
+.body {
+  border: none;
+  border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(0, 0, 0, 0.1),
+    5px -5px 15px rgba(0, 0, 0, 0.05), -5px 5px 15px rgba(0, 0, 0, 0.05); /* Bóng đổ góc dưới bên trái */
+  transition: box-shadow 0.3s ease;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.time {
+  padding: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  text-align-last: right;
+}
+#time {
+  font-size: 25px;
+}
+#date {
+  font-size: 20px;
+}
+.left {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.infor img {
+  width: 70px;
+  height: 70px;
+  transition: 0.3s ease;
+}
+.infor img :hover {
+  cursor: pointer;
+}
+
+#box button {
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(165, 215, 253);
+  color: white;
+  padding: 20px;
+}
+button img {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+}
+#box :hover {
+  background-color: #7ed9e7;
+}
+#box:active {
+  background-color: #7ed9e7;
+}
+#box :visited {
+  background-color: #7ed9e7;
+}
+
+.infor {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: aliceblue;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.nhietdo,
+.doam,
+.nongdo,
+.buimin {
+  width: 150px;
+  height: 180px;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.device {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 20px;
+}
+.device button {
+  width: 150px;
+  height: 80px;
+  border: none;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(255, 255, 255, 0.7); /* Ánh sáng phía trên bên trái */
+  transition: box-shadow 0.3s ease;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>My Smart Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div><img src="img_gif/logo.png" /></div>
+      <div><h1>Hệ thống Smart Home</h1></div>
+      <div><img src="img_gif/logo1.png" /></div>
+    </div>
+    <div class="body">
+      <div class="right">
+        <div class="time">
+          <div id="time"></div>
+          <div id="date"></div>
+          <script>
+            function dongho() {
+              var time = new Date();
+              var date = new Date();
+              var ngay = date.getDate();
+              var thang = date.getMonth();
+              var nam = date.getFullYear();
+              var gio = time.getHours();
+              var phut = time.getMinutes();
+              if (gio < 10) gio = "0" + gio;
+              if (phut < 10) phut = "0" + phut;
+              document.getElementById("time").innerHTML = gio + ":" + phut;
+              document.getElementById("date").innerHTML =
+                ngay + "/" + thang + "/" + nam;
+              setTimeout("dongho()", 1000);
+            }
+            dongho();
+          </script>
+        </div>
+        <div class="infor">
+          <div class="nhietdo">
+            <p><b>Nhiệt độ</b></p>
+            <img src="img_gif/temperature.png" id="tem" />
+            <p id="nhietdo"></p>
+          </div>
+          <div class="doam">
+            <p><b>Độ ẩm</b></p>
+            <img src="img_gif/humidity.png" id="hum" />
+            <p id="doam"></p>
+          </div>
+          <div class="nongdo">
+            <p><b>Nồng độ CO2</b></p>
+            <img src="img_gif/pollution.png" id="co2" />
+            <p id="nongdo"></p>
+          </div>
+          <div class="buimin">
+            <p><b>Bụi mịn</b></p>
+            <img src="img_gif/dust.png" id="dust" />
+            <p id="buimin"></p>
+          </div>
+        </div>
+        <div class="device">
+          <button id="btn1" onclick="Den()">
+            <img id="den" src="img_gif/light-bulb.png" alt="Off" />
+          </button>
+          <button id="btn2" onclick="Maylanh()">
+            <img id="ml" src="img_gif/air-conditioner.png" alt="Off" />
+          </button>
+          <button id="btn3" onclick="Mayloc()">
+            <img id="mlkk" src="img_gif/air-purifier.png" alt="Off" />
+          </button>
+        </div>
+      </div>
+      <div class="left">
+        <div id="box">
+          <button onclick="phongkhach()">
+            <img src="img_gif/sofa.png" alt="livingroom" />
+            <div><b>Phòng khách</b></div>
+          </button>
+        </div>
+        <div id="box">
+          <button onclick="phongngu()">
+            <img src="img_gif/bedroom.png" alt="bedroom" />
+            <div><b>Phòng ngủ</b></div>
+          </button>
+        </div>
+        <div id="box">
+          <button onclick="phongbep()">
+            <img src="img_gif/kitchen.png" alt="kitchen" />
+            <div><b>Phòng bếp</b></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="function.js"></script>
+  </body>
+</html>
